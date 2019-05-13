@@ -30,7 +30,7 @@ class ScrapyLearningPipeline(object):
         item['spider'] = spider.name
         msg = self._encoder.encode(item)
         print(msg)
-        self._producer.produce(msg)
+        self._producer.produce(msg.encode(encoding="UTF-8"))
         # self._producer.produce(item['url'].encode(encoding="UTF-8"))
         return item
 
