@@ -69,7 +69,15 @@ ROBOTSTXT_OBEY = True
 # }
 ITEM_PIPELINES = {
    'scrapy_learning.pipelines.ScrapyLearningPipeline': 300,
+   'scrapy_learning.pipelines.MongoDBPipeline': 300,
 }
+# MongoDB相关参数配置
+MONGODB_SERVER = '10.110.181.40'
+MONGODB_PORT = 27017
+MONGODB_DB = 'testdb'
+MONGODB_COLLECTION = 'questions'
+MONGODB_USER = 'test'
+MONGODB_PWD = 'test'
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See http://doc.scrapy.org/en/latest/topics/autothrottle.html
